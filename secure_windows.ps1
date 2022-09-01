@@ -58,3 +58,6 @@ If (!(Test-Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Policies\Explor
   New-Item -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" | Out-Null
 }
 Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" -Name "NoDriveTypeAutoRun" -Type DWord -Value 255
+
+Write-Host "Disabling Guest Account..."
+Disable-LocalUser -Name "Guest"
