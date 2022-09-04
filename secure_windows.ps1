@@ -61,3 +61,17 @@ Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Policies
 
 Write-Host "Disabling Guest Account..."
 Disable-LocalUser -Name "Guest"
+
+#Remove bloatware - https://www.makeuseof.com/tag/easily-remove-bloatware-windows-10/
+
+Write-Host "Removing bloatware"
+Get-AppxPackage Microsoft.Microsoft3DViewer | Remove-AppxPackage -allusers
+Get-AppxPackage -name "Microsoft.ZuneMusic" | Remove-AppxPackage -allusers
+Get-AppxPackage -name "Microsoft.Music.Preview" | Remove-AppxPackage -allusers
+Get-AppxPackage -name "Microsoft.BingTravel" | Remove-AppxPackage -allusers
+Get-AppxPackage -name "Microsoft.BingHealthAndFitness" | Remove-AppxPackage -allusers
+Get-AppxPackage -name "Microsoft.BingFoodAndDrink" | Remove-AppxPackage -allusers
+Get-AppxPackage -name "Microsoft.People" | Remove-AppxPackage -allusers
+Get-AppxPackage -name "Microsoft.BingFinance" | Remove-AppxPackage -allusers
+Get-AppxPackage -name "Microsoft.3DBuilder" | Remove-AppxPackage -allusers
+Get-AppxPackage -name "Microsoft.BingSports" | Remove-AppxPackage -allusers
