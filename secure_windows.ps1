@@ -75,3 +75,4 @@ Get-AppxPackage -name "Microsoft.People" | Remove-AppxPackage -allusers
 Get-AppxPackage -name "Microsoft.BingFinance" | Remove-AppxPackage -allusers
 Get-AppxPackage -name "Microsoft.3DBuilder" | Remove-AppxPackage -allusers
 Get-AppxPackage -name "Microsoft.BingSports" | Remove-AppxPackage -allusers
+Get-AppxPackage *bingfinance* | Remove-AppxPackage -allusers
