@@ -40,6 +40,10 @@ reg add "HKLM\Software\Policies\Microsoft\Edge" /v "SSLErrorOverrideAllowed" /t 
 reg add "HKLM\Software\Policies\Microsoft\Edge" /v "SmartScreenPuaEnabled" /t REG_DWORD /d "0x00000001" /f
 reg add "HKLM\Software\Policies\Microsoft\Edge" /v "AllowDeletingBrowserHistory" /t REG_DWORD /d "0x00000000" /f
 
+:: disable Cached Logon Credential
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v "cachedlogonscount" /t REG_DWORD /d "0x00000000" /f
+
+
 :: Defender
 setx /M MP_FORCE_USE_SANDBOX 1
 ::
