@@ -240,3 +240,8 @@ reg add "HKCU\SOFTWARE\Microsoft\Office\16.0\Word\Security" /v PackagerPrompt /t
 reg add "HKCU\SOFTWARE\Microsoft\Office\16.0\Word\Security" /v VBAWarnings /t REG_DWORD /d 4 /f
 reg add "HKCU\SOFTWARE\Microsoft\Office\16.0\Word\Security" /v AllowDDE /t REG_DWORD /d 0 /f
 reg add "HKCU\SOFTWARE\Microsoft\Office\Common\Security" /v DisableAllActiveX /t REG_DWORD /d 1 /f
+
+
+CVE-2013-3900 - WinVerifyTrust Signature Validation Vulnerability
+reg add "HKLM\Software\Microsoft\Cryptography\Wintrust\Config" /v EnableCertPaddingCheck /t REG_DWORD /d 1 /f
+reg add "HKLM\Software\Wow6432Node\Microsoft\Cryptography\Wintrust\Config " /v EnableCertPaddingCheck /t REG_DWORD /d 1 /f
